@@ -46,18 +46,20 @@
     {
       
       width: 100%;
+      height: 72%;
     }
     div.corpo_avaliacao
     {
-      
+          text-align: center;
           width: 100%;
+          
     }
     div#referencia
     {
       
-      box-shadow: 0 0 0 1px black; */
-        
-        text-align: center;
+      /*box-shadow: 0 0 0 1px black; */
+        display: flex;
+        text-align: left;
         height: 40px;
         width: 100%;
         position: relative;
@@ -69,9 +71,9 @@
     {
       /*box-shadow: 0 0 0 1px black; */
         width: 100%;
-        height: 53%;
+        height: 80%;
         text-align: center;
-        height: 55%;
+        
         top: 22px;
         position: relative;
     }
@@ -133,6 +135,9 @@
       /*box-shadow: 0 0 0 1px black; */
         width: 100%;
         height: 100%;
+        display: inline-flex;
+        text-align: center;
+
       
     }
     h4#titulo_Peca{
@@ -140,6 +145,17 @@
         margin-top: 0px;
         font-size: 160%;
       padding-top: 5px;
+      width: 50%;
+      text-align: left;
+    }
+
+    h4#titulo_Preco{
+      margin-bottom: 0px;
+        margin-top: 0px;
+        font-size: 160%;
+      padding-top: 5px;
+      width: 50%;
+      text-align: right;
     }
     h4#ref_Peca{
       margin-bottom: 0px;
@@ -147,6 +163,51 @@
         font-size: 90%;
         color: #676767;
     } 
+
+    img.areaVoto
+    {
+          width: 7%;
+              cursor: pointer;
+    background-color: #efefef;
+    border-radius: 80px;
+    padding-left: 25px;
+    padding-right: 25px;
+    padding-top: 5px;
+    object-fit: cover;
+    padding-bottom: 5px;
+    }
+
+    img.areaVotoPreco
+    {
+      
+          width: 7%;
+              cursor: pointer;
+    background-color: #efefef;
+    border-radius: 80px;
+    padding-left: 25px;
+    padding-right: 25px;
+    padding-top: 5px;
+    object-fit: cover;
+    padding-bottom: 5px;
+    }
+
+    #areaVoto
+    {
+          width: 50%;
+    }
+
+    #areaVotoPreco
+    {
+      
+          width: 50%;
+    }
+
+    img#VotoNegativo
+    {
+        transform: rotate(180deg);
+    }
+
+
   </style>
 
   <!--Códigos de Inicialização-->
@@ -160,25 +221,47 @@
   <div id="" class="corpo">
     <div  id="" class="corpo_detalhes">
        <div id="referencia">
-        <h4 id="titulo_Peca">MHARKY L.32</h4>
-        <h4 id="ref_Peca" >00SH3Q088AI - 01</h4>
+        <h4 id="titulo_Peca">MHARKY L.32 - 00SH3Q088AI_01</h4>
+        
+        <h4 id="titulo_Preco">1.380R$</h4>
        
 
       </div>
        <div id="imagem">
           <img class="imagem_1" src="https://github.com/diesussessful/diesel-dev/raw/master/imagens/00SH3Q088AI_FRENTE.png">
+
           <img class="imagem_2" src="https://github.com/diesussessful/diesel-dev/raw/master/imagens/00SH3Q088AI_COSTAS.png">
        </div>
        
-       <div id="detalhes">
+       <!-- <div id="detalhes">
         <h4 class="descricao_titulo">Descrição</h4>
         <h4 class="item_descricao">Denim</h4>
         <h4 class="item_descricao">Skinny</h4>
-       </div>
+       </div> -->
     </div>
 
     <div class="corpo_avaliacao">
-       <div id="avaliacao"></div>
+       <div id="avaliacao">
+         
+         <div id="areaVoto">
+          <h2 class="votoTitulo">Aposta?</h2>
+
+           <img class="areaVoto" style="cursor: pointer;" id="VotoPositivo" src="https://github.com/Darkosheen/ProjetoVotos/raw/master/images/like.png">
+
+           <img class="areaVoto" style="cursor: pointer;" id="VotoNegativo" src="https://github.com/Darkosheen/ProjetoVotos/raw/master/images/like.png">
+
+         </div>
+
+          <div id="areaVotoPreco">
+          <h2 class="votoTitulo">Preço</h2>
+
+           <img class="areaVotoPreco" style="cursor: pointer;" id="VotoPositivo" src="https://github.com/Darkosheen/ProjetoVotos/raw/master/images/like.png">
+
+           <img class="areaVotoPreco" style="cursor: pointer;" id="VotoNegativo" src="https://github.com/Darkosheen/ProjetoVotos/raw/master/images/like.png">
+
+         </div>
+         
+       </div>
      </div>
 
   </div>
